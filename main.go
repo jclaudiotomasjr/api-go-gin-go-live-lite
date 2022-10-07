@@ -1,18 +1,22 @@
 package main
 
 import (
+	"log"
 	"net/http"
 	"os"
 
 	"github.com/gin-gonic/gin"
-	"github.com/jclaudiotomasjr/api-gin-go-live/api-go-gin-go-live-quiz/controllers"
-	"github.com/jclaudiotomasjr/api-gin-go-live/api-go-gin-go-live-quiz/database"
+	"github.com/jclaudiotomasjr/api-gin-go-live/controllers"
+	"github.com/jclaudiotomasjr/api-gin-go-live/database"
+	"github.com/joho/godotenv"
 )
 
 func main() {
-
+	var err error
+	if err = godotenv.Load(); err != nil {
+		log.Fatal(err)
+	}
 	database.ConectaBD()
-
 	router := gin.Default()
 
 	public := router.Group("/api")
@@ -24,4 +28,5 @@ func main() {
 	public.DELETE("/score/:id", controllers.DeleteScore)
 
 	http.ListenAndServe(":"+os.Getenv("HTTP_PORT"), router)
+
 }

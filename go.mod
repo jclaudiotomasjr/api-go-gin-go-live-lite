@@ -1,8 +1,6 @@
-module github.com/jclaudiotomasjr/api-gin-go-live/api-go-gin-go-live-quiz
+module github.com/jclaudiotomasjr/api-gin-go-live
 
-go 1.19
-
-require github.com/go-sql-driver/mysql v1.6.0
+go 1.18
 
 require (
 	github.com/gin-contrib/sse v0.1.0 // indirect
@@ -25,7 +23,7 @@ require (
 	github.com/ugorji/go/codec v1.2.7 // indirect
 	golang.org/x/crypto v0.0.0-20221005025214-4161e89ecf1b // indirect
 	golang.org/x/net v0.0.0-20221004154528-8021a29435af // indirect
-	golang.org/x/sys v0.0.0-20220928140112-f11e5e49a4ec // indirect
+	golang.org/x/sys v0.0.0-20221006211917-84dc82d7e875 // indirect
 	golang.org/x/text v0.3.7 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect

@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/jclaudiotomasjr/api-gin-go-live/api-go-gin-go-live-quiz/database"
-	"github.com/jclaudiotomasjr/api-gin-go-live/api-go-gin-go-live-quiz/models"
+	"github.com/jclaudiotomasjr/api-gin-go-live/database"
+	"github.com/jclaudiotomasjr/api-gin-go-live/models"
 )
 
 func CreateScore(c *gin.Context) {
