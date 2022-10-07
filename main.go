@@ -12,10 +12,7 @@ import (
 )
 
 func main() {
-	var err error
-	if err = godotenv.Load(); err != nil {
-		log.Fatal(err)
-	}
+	godotenv.Load()
 	database.ConectaBD()
 	router := gin.Default()
 
