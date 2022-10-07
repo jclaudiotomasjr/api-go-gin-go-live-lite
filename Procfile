@@ -1,1 +1,1 @@
-web:main
+web: ./bin/api-gin-go-live
